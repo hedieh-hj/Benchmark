@@ -15,7 +15,8 @@ namespace Benchmarker
             var res = BenchmarkRunner.Run<Demo>();
         }
     }
-
+    
+    [MarkdownExporter, AsciiDocExporter, HtmlExporter, CsvExporter, RPlotExporter]
     [SimpleJob(RuntimeMoniker.Net472, baseline: true)] //use for check even .netframework 
     [MemoryDiagnoser] //how much memroy do you use
     public class Demo 
